@@ -1,0 +1,184 @@
+/* General styles */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    position: relative; /* For ::after pseudo-element styling */
+}
+
+.navbar {
+    border-bottom: 1px solid #f3f3f7;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #f7d959;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 6px;
+    left: 0;
+    background-color: #f7d959;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link:focus::after {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 90px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.container input {
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contacts-section {
+    background-color: rgb(243, 243, 247);
+    padding: 16px;
+    border-radius: 20px;
+    border: none;
+}
+
+.button-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-contacts button {
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-contacts button:hover {
+    background-color: #e67e22;
+}
+
+.container-contacts-adress {
+    padding: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contacts-pizzaries {
+    font-size: 20px;
+    width: 220px;
+    height: 220px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacts-pizzaries:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.adress {
+    font-weight: bold;
+}
+
+.work-schedule {
+    font-size: 14px;
+    color: #777;
+}
+
+.overall-content {
+    padding: 44px 0 120px;
+}
+
+<<<<<<< HEAD
+footer a{
+    text-decoration: none;
+}
+.footer {
+    background-color: #181818;
+    color: white;
+    padding: 40px 20px;
+}
+
+.foot_cont {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.foot_nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.foot_nav a {
+    color: white;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.foot_nav a:hover {
+    color: #f7d959;
+}
+
+.foot_fed {
+    display: flex;
+    flex-direction: column;
+}
+
+.foot_fed a {
+    margin: 5px 0;
+    color: white;
+}
+
+.foot_fed a:hover {
+    color: #f7d959;
+}
+
+.fot button {
+    background-color: #FFFBE5;
+    height: 40px;
+    padding: 10px 50px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.fot button:hover {
+    background-color: #f0c94c;
+>>>>>>> 8262bb84a06b0fbe618ee9e25968f1cbf2b0d0cd
+}
