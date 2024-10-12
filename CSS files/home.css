@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 a {
@@ -11,7 +12,48 @@ a {
     color: white;
 }
 
+/* Dark mode */
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .card{
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+}
+.dark-mode .card-title{
+    color: white;
+}
+.dark-mode .card-text{
+    color: white;
+}
+.dark-mode .text-center{
+    color: white;
+}
+
+.switch_mode{
+    padding: 0 13px;
+}
+
+
+.toggle-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 16px;
+}
+
+.toggle-button:hover {
+    background-color: #121212;
+    color: white;
+}
+
 /* Navbar Styles */
+
 .navbar {
     border-bottom: 1px solid #f3f3f7;
 }

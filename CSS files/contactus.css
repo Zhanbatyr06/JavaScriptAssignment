@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 a {
@@ -11,6 +12,46 @@ a {
     color: black;
     position: relative; /* For ::after pseudo-element styling */
 }
+
+/* Dark mode */
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .contacts-section{
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.dark-mode .contacts-pizzaries{
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.dark-mode .adress{
+    color: #ffffff;
+}
+
+.dark-mode .work-schedule{
+    color: #ffffff;
+}
+
+
+.toggle-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 16px;
+}
+
+.toggle-button:hover {
+    background-color: #121212;
+    color: white;
+}
+
 
 .navbar {
     border-bottom: 1px solid #f3f3f7;
@@ -123,7 +164,6 @@ a {
     padding: 44px 0 120px;
 }
 
-<<<<<<< HEAD
 footer a{
     text-decoration: none;
 }
@@ -180,5 +220,4 @@ footer a{
 
 .fot button:hover {
     background-color: #f0c94c;
->>>>>>> 8262bb84a06b0fbe618ee9e25968f1cbf2b0d0cd
 }
