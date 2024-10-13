@@ -95,9 +95,11 @@ a {
 .sidebar a{
     
     font-weight: 800;
+    text-decoration: none;
 }
 .sidebar li{
-    margin-top: 50px;
+    list-style-type: none;
+    margin-top: 50px 0;
 
 }
 
