@@ -20,7 +20,11 @@ a {
     color: #ffffff;
 }
 
-.dark-mode .contacts-section{
+.dark-mode .contacts-section {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+.dark-mode .contacts-section a{
     background-color: #1f1f1f;
     color: #ffffff;
 }
@@ -81,9 +85,16 @@ a {
 .container {
     display: flex;
     justify-content: space-between;
-    margin: 90px auto;
+    margin: 90px 90px auto;
     max-width: 1200px;
     padding: 20px;
+}
+#current-time{
+    display: flex;
+    justify-content: center;
+}
+#current-time-p{
+    font-size: 40px;
 }
 
 .container input {
@@ -99,6 +110,10 @@ a {
     padding: 16px;
     border-radius: 20px;
     border: none;
+}
+.contacts-section a {
+    text-decoration: none;
+    color: #121212;
 }
 
 .button-contacts {
@@ -125,10 +140,11 @@ a {
 }
 
 .container-contacts-adress {
+    margin: 50px 70px auto;
     padding: 35px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    
 }
 
 .contacts-pizzaries {
