@@ -11,4 +11,14 @@ function CloseMenu(){
     bgfone.classList.remove('cover')
 
 }
+function strikedText(){
+    const text1 = document.getElementById('strikedText1');
+    const text2 = document.getElementById('strikedText2');
+    const text3 = document.getElementById('strikedText3');
+    
+    text1.classList.toggle('strikethrough');
+    
+    text2.classList.toggle('strikethrough');
+    text3.classList.toggle('strikethrough');
 
+}
