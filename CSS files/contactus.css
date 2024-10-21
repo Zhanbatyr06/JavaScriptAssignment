@@ -89,13 +89,25 @@ a {
     max-width: 1200px;
     padding: 20px;
 }
-#current-time{
-    display: flex;
-    justify-content: center;
+
+.DateTime{
+    text-align: center;
+    font-size: 25px;
 }
-#current-time-p{
-    font-size: 40px;
+
+.DateTime button{
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;     
 }
+
 
 .container input {
     padding: 10px 16px;
@@ -177,12 +189,18 @@ a {
 }
 
 .overall-content {
-    padding: 44px 0 120px;
+    padding: 44px 0 40px;
+}
+
+.rating{
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 footer a{
     text-decoration: none;
 }
+
 .footer {
     background-color: #181818;
     color: white;

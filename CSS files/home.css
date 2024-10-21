@@ -26,6 +26,7 @@ a {
 }
 .dark-mode .card-title{
     color: white;
+
 }
 .dark-mode .card-text{
     color: white;
@@ -51,6 +52,8 @@ a {
     background-color: #121212;
     color: white;
 }
+
+
 
 /* Navbar Styles */
 
