@@ -18,13 +18,16 @@ function addTask(){
     const TaskList = document.getElementById('TaskList');
     tasks.push(taskInput);
     
-    if (taskInput.trim() !== ""){
-        TaskList.innerHTML += `<li>${taskInput}</li>`;
-        document.getElementById('taskInput').value = "";   
-    }
-    else{
-        alert("напиши задание сука ебаная");
-    }
+    tasks.forEach(task => {
+        if (tasks.trim() == ""){
+            // const sound = document.getElementById('soundEffect')
+            // sound.onplay();
+            alert('напиши задание');
+        }
+        const li = document.createElement('li');
+        li.textContent = task;
+        TaskList.appendChild(li);
+    });
     
 }
 function deleteTask(){
