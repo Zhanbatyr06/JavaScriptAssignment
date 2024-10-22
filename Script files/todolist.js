@@ -14,14 +14,21 @@ function CloseMenu(){
 let tasks = [];
 
 function addTask(){
-    const taskInput = document.getElementById('taskInput');
+    const taskInput = document.getElementById('taskInput').value;
     const TaskList = document.getElementById('TaskList');
-    let newTask = taskInput.value;
-    if (taskInput){
-        tasks.push(newTask);
-        let li = document.createElement('li');
-        li.textContent = newTask;
-        TaskList.appendChild(li);
-        taskInput.value = '';
+    tasks.push(taskInput);
+    
+    if (taskInput.trim() !== ""){
+        TaskList.innerHTML += `<li>${taskInput}</li>`;
+        document.getElementById('taskInput').value = "";   
     }
+    else{
+        alert("напиши задание сука ебаная");
+    }
+    
+}
+function deleteTask(){
+    const TaskListClean = document.getElementById('TaskList');
+    TaskListClean.innerHTML = '';
+        
 }
