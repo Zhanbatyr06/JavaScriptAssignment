@@ -95,36 +95,21 @@ a {
     
     
 }
-.sidebar a{
-    
-    font-weight: 700;
-    text-decoration: none;
-    
-}
-.sidebar a.strikethrough{
-    text-decoration-line: line-through;
-    text-decoration-color: red;
-    text-decoration-thickness: 2px; 
-    
-}
-#DoneButton{
-    position: absolute;
-    margin-top: 20px;
-    right: 50px;
-}
-
-.sidebar li{
-    list-style-type: none;
-    margin-top: 50px 0;
-
-}
-
-
 
 .sidebar.open {
     left: 0; 
     
     
+}
+
+#deleteTask{
+    
+    max-height: 50px;
+    max-width: 50px;
+}
+#taskInput{
+    margin-top: 50px;
+    bottom: 50px;
 }
 .bgfone.cover{
     position: fixed;
