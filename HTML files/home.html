@@ -41,10 +41,13 @@
                     <button class="btn btn-outline-success" onclick="toDoListMenu()">Task</button>
                     <div class="sidebar" id="sidebar">
                         <button class="btn btn-outline-success" onclick="CloseMenu()">X</button>
-                        <ul>
+                        <input type="text" id="taskInput" placeholder="Write the task">
+                        <button class="btn btn-outline-success" id="addTask" onclick="addTask()">Add the task</button>
+                        <ul id="TaskList">
+                            
                             
                         </ul>
-                        <button class="btn btn-outline-success" id="DoneButton" onclick="strikedText()">Done</button>
+                        
                         <div class="bgfone" id="bgfone"></div>
                     </div>
                     
