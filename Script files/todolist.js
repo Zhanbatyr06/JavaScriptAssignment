@@ -19,19 +19,19 @@ function addTask(){
     tasks.push(taskInput);
     
     tasks.forEach(task => {
-        if (tasks.trim() == ""){
-            // const sound = document.getElementById('soundEffect')
-            // sound.onplay();
-            alert('напиши задание');
+        if (task.trim() == ""){
+            const sound = document.getElementById('soundEffect');
+            sound.play();
+            alert("Write a task please");
         }
         const li = document.createElement('li');
         li.textContent = task;
         TaskList.appendChild(li);
+        tasks.length = 0;
     });
     
 }
 function deleteTask(){
-    const TaskListClean = document.getElementById('TaskList');
-    TaskListClean.innerHTML = '';
-        
+   const listTasksClean = document.getElementById('TaskList');
+    listTasksClean.innerHTML = '';
 }
