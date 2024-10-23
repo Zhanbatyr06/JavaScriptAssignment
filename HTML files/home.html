@@ -198,6 +198,12 @@
         <h4 class="mt-4 text-center">Sorted Prices:</h4>
         <p id="sortedNumbers" class="text-center"></p>
     </section>  <!-- Language Switcher -->
+    
+  <!-- Multi-step form with Language Switcher -->
+<section class="multi_step_form container my-5">
+    <h2 class="text-center">Order Your Pizza</h2>
+    
+    <!-- Language Switcher -->
     <div class="text-end mb-3">
         <select id="languageSwitcher" class="form-select w-auto" onchange="changeLanguage()">
             <option value="en">English</option>
@@ -208,7 +214,6 @@
     
     <!-- Multi-step form -->
     <form id="orderForm">
-        <!-- Step 1: Choose Pizza -->
         <div id="step1" class="step">
             <h3 id="step1Label">Choose your pizza:</h3>
             <div class="mb-3">
@@ -222,6 +227,29 @@
             <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next</button>
         </div>
 
+        <div id="step2" class="step" style="display: none;">
+            <h3 id="step2Label">Choose your size:</h3>
+            <div class="mb-3">
+                <select class="form-select" id="sizeSelection">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="prevStep(1)">Previous</button>
+            <button type="button" class="btn btn-primary" onclick="nextStep(3)">Next</button>
+        </div>
+
+        <div id="step3" class="step" style="display: none;">
+            <h3 id="step3Label">Enter your delivery address:</h3>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="addressInput" placeholder="Your address">
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="prevStep(2)">Previous</button>
+            <button type="submit" class="btn btn-success">Submit Order</button>
+        </div>
+    </form>
+</section>
 
      
 
@@ -248,3 +276,4 @@
 <script src="../Script files/todolist.js"></script>
 <script src="../Script files/nightMode.js"></script>
 <script src="../Script files/KeyEvent.js"></script>
+<script src="../Script files/Switch_Statements.js"></script>
