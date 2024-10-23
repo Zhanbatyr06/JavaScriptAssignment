@@ -11,14 +11,27 @@ function CloseMenu(){
     bgfone.classList.remove('cover')
 
 }
-function strikedText(){
-    const text1 = document.getElementById('strikedText1');
-    const text2 = document.getElementById('strikedText2');
-    const text3 = document.getElementById('strikedText3');
-    
-    text1.classList.toggle('strikethrough');
-    
-    text2.classList.toggle('strikethrough');
-    text3.classList.toggle('strikethrough');
+let tasks = [];
 
+function addTask(){
+    const taskInput = document.getElementById('taskInput').value;
+    const TaskList = document.getElementById('TaskList');
+    tasks.push(taskInput);
+    
+    tasks.forEach(task => {
+        if (task.trim() == ""){
+            const sound = document.getElementById('soundEffect');
+            sound.play();
+            alert("Write a task please");
+        }
+        const li = document.createElement('li');
+        li.textContent = task;
+        TaskList.appendChild(li);
+        tasks.length = 0;
+    });
+    
+}
+function deleteTask(){
+   const listTasksClean = document.getElementById('TaskList');
+    listTasksClean.innerHTML = '';
 }
