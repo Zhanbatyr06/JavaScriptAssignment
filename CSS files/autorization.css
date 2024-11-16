@@ -67,6 +67,12 @@ a{
     border: none;
     background-color: #f7d959;
 }
+#login-page{
+    display: none;
+}
+#profile-page{
+    display: none;
+}
 
 
 
