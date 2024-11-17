@@ -27,6 +27,17 @@ const translations = {
     }
 };
 
+function address(){
+    const address = document.getElementById("addressInput").value;
+
+    if(address == ""){
+       alert("Please write address!")
+    }
+    else{
+        alert("Your order successfuly!")
+    }
+}
+
 function changeLanguage() {
     const lang = document.getElementById("languageSwitcher").value;
     document.getElementById("step1Label").innerText = translations[lang].step1Label;

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS files/quiz.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../icon/pizza-svgrepo-com.svg" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                PizzaGo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="after" href="./quiz.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="after" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="./aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="time()" id="click" href="./contact.html">Contact</a>
+                    </li>
+                    <button class="btn btn-outline-success" type="submit"><a href="./autorization.html">Sign Up</a></button>
+                    <div class="switch_mode">
+                        <button id="theme-toggle" class="btn btn-dark">Night Mode</button>
+                    </div>
+                    <button class="btn btn-outline-success" onclick="toDoListMenu()">Task</button>
+                    <div class="sidebar" id="sidebar">
+                        <button class="btn btn-outline-success" onclick="CloseMenu()">X</button>
+                        
+                        <button class="btn btn-outline-success" id="addTask" onclick="addTask()">Add the task</button>
+                        <button class="btn btn-outline-success" id="deleteTask" onclick="deleteTask()">Clear</button>
+                        <input type="text" id="taskInput" placeholder="Write the task">
+                        <audio src="../sounds/error_CDOxCYm.mp3" id="soundEffect"></audio>
+                        <ul id="TaskList">
+                            
+                            
+                        </ul>
+                        
+                        <div class="bgfone" id="bgfone"></div>
+                    </div>
+                    
+                </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="pizza-quiz" class="container my-5">
+        <h2 class="text-center">Pizza Quiz</h2>
+        <p class="text-center">Test your pizza knowledge and get your score!</p>
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <h5>1. What is the main ingredient in Margherita pizza?</h5>
+                <label><input type="radio" name="q1" value="Mozzarella"> Mozzarella</label><br>
+                <label><input type="radio" name="q1" value="Cheddar"> Cheddar</label><br>
+                <label><input type="radio" name="q1" value="Parmesan"> Parmesan</label><br>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+                <h5>2. Which country is the birthplace of pizza?</h5>
+                <label><input type="radio" name="q2" value="Italy"> Italy</label><br>
+                <label><input type="radio" name="q2" value="USA"> USA</label><br>
+                <label><input type="radio" name="q2" value="France"> France</label><br>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+                <h5>3. What type of flour is traditionally used for pizza dough?</h5>
+                <label><input type="radio" name="q3" value="All-purpose"> All-purpose</label><br>
+                <label><input type="radio" name="q3" value="00 flour"> 00 flour</label><br>
+                <label><input type="radio" name="q3" value="Whole wheat"> Whole wheat</label><br>
+            </div>
+            <!-- Question 4 -->
+            <div class="question">
+                <h5>4. What is the traditional shape of pizza?</h5>
+                <label><input type="radio" name="q4" value="Round"> Round</label><br>
+                <label><input type="radio" name="q4" value="Square"> Square</label><br>
+                <label><input type="radio" name="q4" value="Triangle"> Triangle</label><br>
+            </div>
+            <!-- Question 5 -->
+            <div class="question">
+                <h5>5. What is the most popular pizza topping in the world?</h5>
+                <label><input type="radio" name="q5" value="Pepperoni"> Pepperoni</label><br>
+                <label><input type="radio" name="q5" value="Mushrooms"> Mushrooms</label><br>
+                <label><input type="radio" name="q5" value="Olives"> Olives</label><br>
+            </div>
+            <!-- Question 6 -->
+            <div class="question">
+                <h5>6. What is the ideal oven temperature for cooking pizza?</h5>
+                <label><input type="radio" name="q6" value="180°C"> 180°C</label><br>
+                <label><input type="radio" name="q6" value="250°C"> 250°C</label><br>
+                <label><input type="radio" name="q6" value="300°C"> 300°C</label><br>
+            </div>
+            <!-- Question 7 -->
+            <div class="question">
+                <h5>7. Which pizza variety includes pineapples?</h5>
+                <label><input type="radio" name="q7" value="Hawaiian"> Hawaiian</label><br>
+                <label><input type="radio" name="q7" value="Margherita"> Margherita</label><br>
+                <label><input type="radio" name="q7" value="Four Cheese"> Four Cheese</label><br>
+            </div>
+            <!-- Submit Button -->
+            <div class="text-center my-3">
+                <button type="button" id="submit-quiz" class="btn btn-primary">Submit Quiz</button>
+            </div>
+        </form>
+        <!-- Result Section -->
+        <div id="quiz-result" class="text-center my-4" style="display: none;">
+            <h4>Your Score: <span id="score"></span>/7</h4>
+            <p id="feedback"></p>
+        </div>
+    </section>
+    <script src="../Script files/quiz.js"></script>
+    <script src="../Script files/nightMode.js"></script>
+    <script src="../Script files/KeyEventNight.js"></script>
+</body>
+</html>
