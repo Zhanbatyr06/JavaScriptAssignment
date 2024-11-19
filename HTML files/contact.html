@@ -46,11 +46,13 @@
             
             <div class="input-button text-center my-5">
                 <h1>Astana</h1>
-                <input type="text" class="form-control" placeholder="Напишите район, улицу">
+                <input type="text" class="form-control" placeholder="Write a street">
+                
             </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4214.395339889851!2d71.42018564316265!3d51.09195519724986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585a605525605%3A0x4dff4a1973f7567e!2sAstana%20IT%20University!5e0!3m2!1sru!2skz!4v1725612473551!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
             <div class="button-contacts text-center">
                 <button class="btn btn-primary mb-3">Карта доставок</button>
+                <button class="btn btn-primary mb-3" id='WeatherBtn'>Weather</button>
                 <div class="contacts-section">
                     <p><strong>Телефон:</strong></p>
                     <a href="tel:+77771234560" class="d-block">+7 777 123 45 60</a>
@@ -63,6 +65,9 @@
         
         <div class="DateTime">
         <button class="btn btn-secondary" id="show-time-btn">Show Current Time</button>
+        <div id="weatherResult" style="margin-top: 20px;">
+            
+        </div>
         <div id="current-time" style="display: none;"></div>
         <div id="current-time-p" style="display: none;"></div>
         </div>  
@@ -125,3 +130,4 @@
 <script src="../Script files/nightMode.js"></script>
 <script src="../Script files/show-time.js"></script>
 <script src="../Script files/KeyEventNight.js"></script>
+<script src="../Script files/weatherAPI.js"></script>
