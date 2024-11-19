@@ -20,6 +20,14 @@ toggleButton.addEventListener('click', () => {
         row.style.color = isNightMode ? '#000' : '#fff';           
     });
 
+
+    const timelines = document.querySelectorAll('.timeline-content');
+
+    timelines.forEach(timeline => {
+        timeline.style.backgroundColor = isNightMode ? '#fff' : '#1f1f1f';
+        timeline.style.color = isNightMode ? '#000' : '#fff';      
+    });
+
     toggleButton.textContent = isNightMode ? 'Night Mode' : 'Light Mode';
     isNightMode = !isNightMode;
 });

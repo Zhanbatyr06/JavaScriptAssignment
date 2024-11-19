@@ -75,6 +75,56 @@ a {
     max-width: 800px;
 }
 
+
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #ddd;
+}
+
+.timeline-content {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0;
+    transform: translateY(50px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.chart-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
 .footer {
     background-color: #181818;
     color: white;
